@@ -1,6 +1,18 @@
 package fintech1.hackathon.feign;
 
-import fintech1.hackathon.dto.banking.*;
+import fintech1.hackathon.dto.banking.balance.InquireBalanceDto;
+import fintech1.hackathon.dto.banking.balance.RequestInquireBalanceDto;
+import fintech1.hackathon.dto.banking.electricity.ElectricityFarePaymentDto;
+import fintech1.hackathon.dto.banking.electricity.InquireElectricityFarePaymentDto;
+import fintech1.hackathon.dto.banking.electricity.InquireElectricityFarePaymentHistoryDto;
+import fintech1.hackathon.dto.banking.history.InquireTransactionHistoryDto;
+import fintech1.hackathon.dto.banking.register.CheckOpenFinAccountDirectDto;
+import fintech1.hackathon.dto.banking.register.OpenFinAccountDirectDto;
+import fintech1.hackathon.dto.banking.sewage.InquireSewageFarePaymentHistoryDto;
+import fintech1.hackathon.dto.banking.sewage.SewageFarePaymentDto;
+import fintech1.hackathon.dto.banking.transfer.DrawingTransferDto;
+import fintech1.hackathon.dto.banking.transfer.ReceivedTransferAccountNumberDto;
+import fintech1.hackathon.dto.banking.transfer.ReceivedTransferOtherBankDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -52,7 +64,7 @@ public interface OpenBankingFeign {
 
 
     //@PostMapping(path = "/InquireBalance.nh",  consumes = "application/json", produces = "application/json")
-    @RequestMapping(path="/InquireBalance.nh", method = {RequestMethod.POST})
+    @PostMapping(path="/InquireBalance.nh")//, method = RequestMethod.POST)
     public InquireBalanceDto requestInquireBalance(@RequestBody RequestInquireBalanceDto requestInquireBalanceDto);
 
 

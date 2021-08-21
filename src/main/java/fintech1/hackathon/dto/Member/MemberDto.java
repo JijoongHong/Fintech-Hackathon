@@ -10,11 +10,5 @@ public class MemberDto {
     private String email;
     private String password;
     private String birth;
-    private Integer rent;
-    private Integer mgmtFee;
-    private Integer targetExpenses;
-    private Boolean isAutopay;
-    private String autopayDay;
-    private String account;
-    private String bankCode;
+
 }

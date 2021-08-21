@@ -1,7 +1,7 @@
 package fintech1.hackathon.controller;
 
-import fintech1.hackathon.dto.banking.InquireBalanceDto;
-import fintech1.hackathon.repository.MemberRepository;
+import fintech1.hackathon.dto.banking.balance.InquireBalanceDto;
+import fintech1.hackathon.dto.banking.balance.RequestInquireBalanceDto;
 import fintech1.hackathon.service.OpenBankingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,12 @@ public class OpenBankingController {
 
     @RequestMapping(path="/balance")
     public InquireBalanceDto requestBalance(){
-        return OpenBankingService.requestBalance();
+        return openBankingService.requestBalance();
+    }
+
+    @GetMapping(path="why")
+    public RequestInquireBalanceDto requestInquireBalanceDto(){
+        return openBankingService.test();
     }
     /*
     private String Iscd = "${Iscd}";
