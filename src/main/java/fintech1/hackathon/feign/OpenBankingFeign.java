@@ -2,10 +2,7 @@ package fintech1.hackathon.feign;
 
 import fintech1.hackathon.dto.banking.*;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @FeignClient(name = "feign", url="https://developers.nonghyup.com")
 public interface OpenBankingFeign {
@@ -39,20 +36,25 @@ public interface OpenBankingFeign {
             @RequestParam("Rgno") String Rgno,
             @RequestParam("BrdtBrno") String BrdtBrno
     );
-
-
-    @PostMapping(path = "/InquireBalance.nh")
+    /*
+    @PostMapping(path = "/InquireBalance.nh",  produces = "application/json")
     public InquireBalanceDto requestInquireBalance(
-            @RequestHeader(name = "apiName", defaultValue = "InquireBalance") String apiName,
+            @RequestHeader(name = "apiName",required = false, defaultValue = "InquireBalance") String apiName,
             @RequestHeader("Tsymd") String Tsymd,
             @RequestHeader("Trtm") String Trtm,
-            @RequestHeader(name = "Iscd", defaultValue = "001059") String Iscd,
-            @RequestHeader(name = "FintechApsno", defaultValue = "001") String FintechApsno,
+            @RequestHeader(name = "Iscd", required = false, defaultValue = "001059") String Iscd,
+            @RequestHeader(name = "FintechApsno", required = false, defaultValue = "001") String FintechApsno,
             @RequestHeader("APISvcCd") String APISvcCd,
             @RequestHeader("Istuno") String Istuno,
-            @RequestHeader(name = "AccessToken", defaultValue = "d3f92a5b17ea32069a3ede2bd8a964a520e55902032c2a36f34754d310454659") String AccessToken,
+            @RequestHeader(name = "AccessToken", required = false, defaultValue = "d3f92a5b17ea32069a3ede2bd8a964a520e55902032c2a36f34754d310454659") String AccessToken,
             @RequestParam("FinAcno") String FinAcno
-    );
+    );*/
+
+
+    //@PostMapping(path = "/InquireBalance.nh",  consumes = "application/json", produces = "application/json")
+    @RequestMapping(path="/InquireBalance.nh", method = {RequestMethod.POST}, consumes = "application/json", produces = "application/json")
+    public InquireBalanceDto requestInquireBalance(@RequestBody RequestInquireBalanceDto requestInquireBalanceDto);
+
 
     @PostMapping(path = "/DrawingTransfer.nh")
     public DrawingTransferDto requestDrawingTransfer(
