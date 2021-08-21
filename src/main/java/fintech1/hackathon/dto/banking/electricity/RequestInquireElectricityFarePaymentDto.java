@@ -7,10 +7,9 @@ import lombok.*;
 @Data
 @Getter
 @Setter
-@AllArgsConstructor
-public class RequestInquireElectricityFarePayment {
+public class RequestInquireElectricityFarePaymentDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto;
+    private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePayment");
     @JsonProperty("ElecPayNo")
     private String ElecPayNo="0606628088"; //은행코드
     @JsonProperty("Acno")

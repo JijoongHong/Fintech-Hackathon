@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RequestInquireElectricityFarePaymentHistory {
+public class RequestInquireElectricityFarePaymentHistoryDto {
     @JsonProperty("Header")
     private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePaymentHistory");
     @JsonProperty("ElecPayNo")

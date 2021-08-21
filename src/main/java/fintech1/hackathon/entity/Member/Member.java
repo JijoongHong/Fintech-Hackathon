@@ -1,4 +1,4 @@
-package fintech1.hackathon.entity;
+package fintech1.hackathon.entity.Member;
 
 
 import lombok.Builder;
@@ -22,7 +22,7 @@ import java.util.Set;
 public class Member implements UserDetails {
     @Id
     @Column(name = "seq")
-    @GeneratedValue //시퀀스 생성
+    //@GeneratedValue //시퀀스 생성
     Long seq;
 
     @Column(name = "email", unique = true)
@@ -37,35 +37,12 @@ public class Member implements UserDetails {
     @Column(name = "auth")
     String auth;
 
-    @Column(name = "birth")
-    String birth;
-
-    @Column(name = "rent")
-    String rent;
-
-    @Column(name = "mgmtFee")
-    String mgmtFee;
-
-    @Column(name = "targetExpenses")
-    String targetExpenses;
-
-    @Column(name = "isAutopay")
-    String isAutopay;
-
-    @Column(name = "autopayDay")
-    String autopayDay;
-
-    @Column(name = "account")
-    String account;
-
-    @Column(name = "bankCode")
-    String bankCode;
-
     @Builder
     public Member(String email, String password, String name){
         this.email = email;
         this.password = password;
         this.name = name;
+        this.auth = "user";
     }
 
     @Override

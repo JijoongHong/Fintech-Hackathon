@@ -12,12 +12,11 @@ import java.time.LocalDateTime;
 @Data
 @Getter
 @Setter
-@AllArgsConstructor
-public class RequestInquireTransactionHistory {
+public class RequestInquireTransactionHistoryDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto;
+    private HeaderDto headerDto = new HeaderDto("InquireTransactionHistory");
     @JsonProperty("Bncd")
-    private String Bncd; //은행코드
+    private String Bncd = "011"; //은행코드
     @JsonProperty("Acno")
     private String Acno; //계좌번호
     @JsonProperty("Insymd")
@@ -30,4 +29,8 @@ public class RequestInquireTransactionHistory {
     private String PageNo = "1"; //페이지
     @JsonProperty("Dmcnt")
     private String Dmcnt = "100"; //페이지 당 갯수
+
+    public RequestInquireTransactionHistoryDto(String acno) {
+        Acno = acno;
+    }
 }

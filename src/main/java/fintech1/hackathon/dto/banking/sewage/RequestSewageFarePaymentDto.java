@@ -8,7 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RequestSewageFarePayment {
+public class RequestSewageFarePaymentDto {
     @JsonProperty("Header")
     private HeaderDto headerDto;
     @JsonProperty("PbtxGroNo")

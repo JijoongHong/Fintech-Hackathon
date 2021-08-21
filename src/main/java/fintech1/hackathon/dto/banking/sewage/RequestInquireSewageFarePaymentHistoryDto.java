@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-public class RequestInquireSewageFarePaymentHistory {
+public class RequestInquireSewageFarePaymentHistoryDto {
     @JsonProperty("Header")
     private HeaderDto headerDto;
     @JsonProperty("ElecPayNo")

@@ -1,7 +1,7 @@
 package fintech1.hackathon.service;
 
 import fintech1.hackathon.dto.Member.MemberDto;
-import fintech1.hackathon.entity.Member;
+import fintech1.hackathon.entity.Member.Member;
 import fintech1.hackathon.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;

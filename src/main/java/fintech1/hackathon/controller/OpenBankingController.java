@@ -23,27 +23,7 @@ public class OpenBankingController {
     public RequestInquireBalanceDto requestInquireBalanceDto(){
         return openBankingService.test();
     }
-    /*
-    private String Iscd = "${Iscd}";
-    private String FintechApsno = "001";
-    private String ApiSvcCd = "ReceivedTransferA";
-    private String AccessToken = "${access_token}";
-    private String FinAcno = "00820100010590000000000011165";
-    */
-    //@Value("${}")
-    //@PostMapping("/dashboard")
-    //@PostMapping("/setting")
 
-    //@PostMapping("/balance")
-    /*
-    @RequestMapping(path="/balance")
-    public InquireBalanceDto requestBalance(){
-        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance"), FinAcno);
-        System.out.println("requestInquireBalanceDto = " + requestInquireBalanceDto.toString());
-        InquireBalanceDto inquireBalanceDto = openBankingFeign.requestInquireBalance(requestInquireBalanceDto);
-        System.out.println("inquireBalanceDto = " + inquireBalanceDto.getLdbl());
-        return inquireBalanceDto;
-    }*/
 
 
 
