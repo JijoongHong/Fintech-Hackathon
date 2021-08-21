@@ -29,7 +29,7 @@ public class HeaderDto {
         this.ApiNm = ApiNm;
         String now = LocalDateTime.now().toString();
         this.Tsymd = now.split("T")[0].replaceAll("-", "");
-        this.Trtm = now.split("T")[1].replaceAll(":", "").split(".")[0];
+        this.Trtm = now.split("T")[1].replaceAll(":", "").substring(0,6);
         String random = "";
         for (int i = 0; i<20;i++){
             char ch = (char)((int)(Math.random()*25)+97);

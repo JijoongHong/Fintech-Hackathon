@@ -52,7 +52,7 @@ public interface OpenBankingFeign {
 
 
     //@PostMapping(path = "/InquireBalance.nh",  consumes = "application/json", produces = "application/json")
-    @RequestMapping(path="/InquireBalance.nh", method = {RequestMethod.POST}, consumes = "application/json", produces = "application/json")
+    @RequestMapping(path="/InquireBalance.nh", method = {RequestMethod.POST})
     public InquireBalanceDto requestInquireBalance(@RequestBody RequestInquireBalanceDto requestInquireBalanceDto);
 
 

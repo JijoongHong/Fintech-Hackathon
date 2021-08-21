@@ -1,38 +1,46 @@
 package fintech1.hackathon.controller;
 
-import fintech1.hackathon.dto.banking.HeaderDto;
 import fintech1.hackathon.dto.banking.InquireBalanceDto;
-import fintech1.hackathon.dto.banking.RequestInquireBalanceDto;
-import fintech1.hackathon.feign.OpenBankingFeign;
+import fintech1.hackathon.repository.MemberRepository;
+import fintech1.hackathon.service.OpenBankingService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+@RequiredArgsConstructor
 @RestController
-@CrossOrigin(origins = "*", methods = RequestMethod.POST)
+//@CrossOrigin(origins = "*", methods = RequestMethod.POST)
 public class OpenBankingController {
     @Autowired
-    private OpenBankingFeign openBankingFeign;
+    OpenBankingService openBankingService;
 
+    @RequestMapping(path="/balance")
+    public InquireBalanceDto requestBalance(){
+        return OpenBankingService.requestBalance();
+    }
+    /*
     private String Iscd = "${Iscd}";
     private String FintechApsno = "001";
     private String ApiSvcCd = "ReceivedTransferA";
     private String AccessToken = "${access_token}";
     private String FinAcno = "00820100010590000000000011165";
-
+    */
     //@Value("${}")
     //@PostMapping("/dashboard")
     //@PostMapping("/setting")
 
     //@PostMapping("/balance")
-    @RequestMapping(path="/balance",  consumes = "application/json", produces = "application/json")
-    public InquireBalanceDto requestBalance(@RequestBody RequestInquireBalanceDto requestInquireBalanceDto){
-        requestInquireBalanceDto.setHeaderDto(new HeaderDto("InquireBalance"));
+    /*
+    @RequestMapping(path="/balance")
+    public InquireBalanceDto requestBalance(){
+        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance"), FinAcno);
+        System.out.println("requestInquireBalanceDto = " + requestInquireBalanceDto.toString());
         InquireBalanceDto inquireBalanceDto = openBankingFeign.requestInquireBalance(requestInquireBalanceDto);
         System.out.println("inquireBalanceDto = " + inquireBalanceDto.getLdbl());
         return inquireBalanceDto;
-    }
+    }*/
+
+
 
 
 }

@@ -1,10 +1,9 @@
 package fintech1.hackathon.service;
 
-import fintech1.hackathon.dto.MemberDto;
+import fintech1.hackathon.dto.Member.MemberDto;
 import fintech1.hackathon.entity.Member;
 import fintech1.hackathon.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

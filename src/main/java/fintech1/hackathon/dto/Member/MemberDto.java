@@ -1,4 +1,4 @@
-package fintech1.hackathon.dto;
+package fintech1.hackathon.dto.Member;
 
 import lombok.Getter;
 import lombok.Setter;
