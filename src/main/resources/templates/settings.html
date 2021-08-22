@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/style.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav ul.sub").hide();
+			$("#nav ul.menu li").click(function(){
+				$("ul",this).slideToggle("fast");
+			});
+		});
+        $('a.feellink').click(function(e)   {
+	        e.preventDefault();   
+        });
+        
+	</script>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: sans-serif;
+    }
+    #nav { font-family:'arial'; }
+    #nav ul{ width:100%; margin:0; padding:0; }
+    #nav ul.menu li{ 
+        position:relative; 
+        float:left; width:100%; 
+        list-style-type:none; 
+    }
+   #nav ul.menu li a{ 
+        display:block; 
+        width:100%; 
+        height:100%; 
+        line-height:70px; 
+        text-indent:10px; 
+        color:black; 
+        font-weight:bold; 
+        text-decoration:none; 
+        font-family: sans-serif;
+    }
+   #nav ul.menu li a:hover{ 
+        background:#eee; 
+    }
+   #nav ul.menu li .sub a{ 
+        position:relative; 
+        float:left; 
+        display:block; 
+        width:100%; 
+        z-index:auto; 
+        background:white; 
+        font-size: 15px;
+    }
+   #nav ul.menu li .sub a:hover{ 
+        background:#D8F2EC; 
+        color:black; 
+    }
+    .menu-padding {
+        padding-top: 10px;
+        padding-bottom: -10px;
+    }
+    .circle {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: hsl(166, 50%, 90%);
+        margin: auto;
+        text-align: center;
+        line-height: 140px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border:none;
+        color: black;
+        margin-bottom: 30px;
+    }
+    h4 {
+        color: black;
+        font-family: sans-serif;
+        font-size: 18px;
+        
+    }
+    div.circle:hover {
+        background-color: #56C4B0;
+        color: white;
+    }
+    h2 {
+        margin-bottom: -5px;
+    }
+
+    input.intable{
+        font-size:18px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border-radius: 7px;
+        border-color: none;
+        padding: 5px;
+        border: none;
+    }
+    
+    label{
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 33px;
+    }
+    .box {
+        padding: 15px;
+        padding-left: 10px;
+    }
+    td {
+        padding: 10px;
+    }
+    select option {
+        display:inline-block;
+    }
+
+    #checkboxes input[type=checkbox]{
+        display: none;
+    }
+    #checkboxes input[type=checkbox]:checked +.circle{
+        background-color: #128671;
+        color: white
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+
+    
+</style>
+<body>
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+                <div class="left-menu">
+                    <table style="width:100%">
+                        <colgroup>
+                            <col span="1" style="width: 1fr">
+                            <col span="1" style="width: 2fr">
+                            <col span="1" style="width: 1fr">
+                            <col span="1" style="width: 2fr">
+                            
+                         </colgroup>
+                        <tbody>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/graph.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px; "> 
+                                    <a href="asset.html" title="자산 관리">자산 관리</a><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/pick.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px;"> 
+                                    <a href="fin_rec.html" title="금융 추천">금융 추천</a><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/star.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px;"> 
+                                    <a href="product_rec.html" title="상품 추천">상품 추천</a><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/person.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px;"> 
+                                    <a href="helper.html" title="금융 도우미">금융 도우미</a><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/community.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px;"> 
+                                    <a href="community.html" title="커뮤니티">커뮤니티</a><br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-top: 7px; padding-left: 45px;">
+                                    <img class ="menu-img" src="images/setting.png">
+                                </td>
+                                <td style="text-align: left; padding-left: 10px;"> 
+                                    <a href="settings.html" title="설정">설정</a><br> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <img class="mascot" src="images/alien.png">
+               </div>
+            </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input style="box-shadow: none; border-radius: 0px" type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"> <img class="icon" src="images/search.png"> </button>
+                </div>
+            </div>
+            <div class="margin-main">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="top-img" src="images/pin.png">
+                            </td>
+                            <td>
+                                <h1>개인정보 관리</h1>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <form>
+                        <table class="bordered box" style="width:70%;">
+                            <colgroup>
+                                <col span="1" style="width: 1fr;">
+                                <col span="1" style="width: 2fr;">
+                                <col span="1" style="width: 1fr;">
+                                <col span="1" style="width: 2fr;">
+                                
+                             </colgroup>
+                            <tbdy>
+                                <tr>
+                                    <td>
+                                        <label for="name">이름</label>
+                                    </td>
+                                    <td style="color:#128671"> <b>
+                                        이하나</b>
+                                    </td>
+                                    <td>
+                                        <label for="pw">비밀번호 설정</label>
+                                    </td>
+                                    <td>
+                                        <input class="intable" id="pw" type="text" name="mypw" required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                    <label for="age">생년월일</label>
+                                    </td>
+                                    <td style="color:#128671"><b>
+                                    1997.12.08</b>
+                                    </td>
+                                    <td>
+                                    <label for="pw2">비밀번호 확인</label>
+                                    </td>
+                                    <td>
+                                    <input class="intable" id="pw2" type="text" name="mypw2" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <label for="id">이메일</label>
+                                    </td>
+                                    <td style="color:#128671"><b> hana@fintech.com</b></td>
+                                    <td style="padding-left: 40px;text-align: center; box-shadow:none">
+                                    <input type="submit" value="설정 변경">
+                                    </td>
+                                </tr>    
+                            </tbdy>
+                        </table>
+                    </form>
+                
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="top-img" src="images/pin.png">
+                        </td>
+                        <td>
+                            <h1>주거비 관리</h1>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                
+                <form>
+                    <table class="bordered box"style="width:70%;"> 
+                        <colgroup>
+                            <col span="1" style="width: 1fr;">
+                            <col span="1" style="width: 1fr;">
+                            
+                         </colgroup>
+                        <tbdy>
+                            <tr>
+                                <td>
+                                    <label for="month">월세&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <input class="intable" id="month" type="number" name="mymonth" required>&nbsp;&nbsp;만원                                   
+                                </td>
+                                <td style="padding-left: 10px;">
+                                    <label for="bill">관리비</label>
+                                    <input class="intable" id="bill" type="number" name="mybill" required>&nbsp;&nbsp;만원
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="goal">목표 생활비</label>
+                                    <input class="intable" id="goal" type="number" name="mygoal" required>&nbsp;&nbsp;만원
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="auto">자동이체&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    <select style="font-size: 18px" name="auto" size="1">
+                                        <option value="no">설정안함</option>
+                                        <option value="yes">설정함</option>
+                                        
+                                        
+                                    </select>
+                                </td>
+                                
+                                <td>
+                                    <label for="alert">알림일</label>
+                                    <input class="intable" id="alert" type="text" name="myalert" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="account">계좌연동</label>
+                                    <table>
+                                        <tbdy>
+                                            <tr>
+                                                <td>
+                                                    <input er-radius: 0px id="account1" type="radio" name="my_account" required value="011">농협은행
+                                                </td>
+                                                <td>
+                                                    <input id="account2" type="radio" name="my_account" required value="004">국민은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input  id="account3" type="radio" name="my_account" required value="088">신한은행
+                                                </td>
+                                                <td>
+                                                    <input id="account4" type="radio" name="my_account" required value="020">우리은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input id="account5" type="radio" name="my_account" required value="090">카카오뱅크
+                                                </td>
+                                            </tr>
+                                        </tbdy>
+                                    </table>
+                                </td>
+                                <td>
+                                    <label for="accountnum">계좌번호</label>
+                                    <input class="intable" id="accountnum" type="text" name="myaccount" required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="month_account">임차인 계좌</label>
+                                    <table>
+                                        <tbdy>
+                                            <tr>
+                                                <td>
+                                                    <input  id="month_account1" type="radio" name="my_month_account" required value="011">농협은행
+                                                </td>
+                                                <td>
+                                                    <input  id="month_account2" type="radio" name="my_month_account" required value="004">국민은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input style="box-shadow: none; border-radius: 0px" id="month_account3" type="radio" name="my_month_account" required value="088">신한은행
+                                                </td>
+                                                <td>
+                                                    <input style="box-shadow: none; border-radius: 0px" id="month_account4" type="radio" name="my_month_account" required value="020">우리은행
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input style="box-shadow: none; border-radius: 0px" id="month_account5" type="radio" name="my_month_account" required value="090">카카오뱅크
+                                                </td>
+                                            </tr>
+                                        </tbdy>
+                                    </table>
+                                </td>
+                                <td>
+                                    <label for="month_accountnum">임차인계좌번호</label>
+                                    <input class="intable" id="month_accountnum" type="text" name="my_month_accountnum" required>
+                                </td>          
+                            </tr>
+                            
+                            <tr>
+                                
+                                <td>
+                                    <td>
+                                        <input type="submit" value=" 주거비 정보 등록">
+                                    </td>
+                                </td>
+                            </tr>
+                        </tbdy>
+                   </table>
+                   
+                </form>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img class="top-img" src="images/pin.png">
+                        </td>
+                        <td>
+                            <h1>추천 관리</h1>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bordered" style="width: 75%">
+                <h2 style="padding: 30px 0 10px 30px">금융 상품</h2><hr >
+                <div id="checkboxes" class="wrapper" style="margin:20px 0 20px 0;">
+                    <input type="checkbox" name="rGroup" value="1" id="r1" />
+                    <label class="circle" for="r1">투자 성향</label>
+                    
+                    <input type="checkbox" name="rGroup" value="2" id="r2" />
+                    <label class="circle" for="r2">예·적금</label>
+                    
+                    <input type="checkbox" name="rGroup" value="3" id="r3" />
+                    <label class="circle" for="r3">주식·펀드</label>
+
+                    <input type="checkbox" name="rGroup" value="4" id="r4" />
+                    <label class="circle" for="r4">대체투자</label>
+
+                    <input type="checkbox" name="rGroup" value="5" id="r5" />
+                    <label class="circle" for="r5">카드</label>
+
+                    <input type="checkbox" name="rGroup" value="6" id="r6" />
+                    <label class="circle" for="r6">보험</label>
+
+                    <input type="checkbox" name="rGroup" value="7" id="r7" />
+                    <label class="circle" for="r7">연금저축</label>
+
+                    <input type="checkbox" name="rGroup" value="8" id="r8" />
+                    <label class="circle" for="r8">대출</label>
+                  </div>
+                
+                  <h2 style="padding: 30px 0 10px 30px">구독 상품</h2><hr style="padding: 0 20px 0 20px">
+                <div id="checkboxes" class="wrapper" style="margin:20px 0 20px 0;">
+                    <input type="checkbox" name="rGroup" value="9" id="r9" />
+                    <label class="circle" for="r9">식품</label>
+                    
+                    <input type="checkbox" name="rGroup" value="10" id="r10" />
+                    <label class="circle" for="r10">신선·야채</label>
+                    
+                    <input type="checkbox" name="rGroup" value="11" id="r11" />
+                    <label class="circle" for="r11">세탁·청소</label>
+
+                    <input type="checkbox" name="rGroup" value="12" id="r12" />
+                    <label class="circle" for="r12">생활 용품</label>
+
+                    <input type="checkbox" name="rGroup" value="13" id="r13" />
+                    <label class="circle" for="r13">의류</label>
+
+                    <input type="checkbox" name="rGroup" value="14" id="r14" />
+                    <label class="circle" for="r14">주류</label>
+
+                    <input type="checkbox" name="rGroup" value="15" id="r15" />
+                    <label class="circle" for="r15">콘텐츠</label>
+
+                    <input type="checkbox" name="rGroup" value="16" id="r16" />
+                    <label class="circle" for="r16">반려 동물</label>
+                  </div>
+    </div>
+        </div>
+      
+      </div>
+</body>
+</html>
