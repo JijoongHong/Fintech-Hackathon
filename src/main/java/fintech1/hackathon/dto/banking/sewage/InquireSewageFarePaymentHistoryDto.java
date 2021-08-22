@@ -2,9 +2,13 @@ package fintech1.hackathon.dto.banking.sewage;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 @Data
+@Getter
+@Setter
 public class InquireSewageFarePaymentHistoryDto {
     @JsonProperty("TotCnt")
     private String TotCnt;
@@ -14,6 +18,6 @@ public class InquireSewageFarePaymentHistoryDto {
     private String IqtCnt;
     @JsonProperty("CtntDataYn")
     private String CtntDataYn;
-    @JsonProperty("rec")
-    private List<SewageFareHistoryDto> rec;
+    @JsonProperty("REC")
+    private List<SewageFareHistoryDto> REC;
 }

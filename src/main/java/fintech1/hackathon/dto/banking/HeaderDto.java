@@ -29,14 +29,15 @@ public class HeaderDto {
     @JsonProperty("FintechApsno")
     private String FintechApsno = "001"; // 001 기본
     @JsonProperty("ApiSvcCd")
-    private String ApiSvcCd =  "ReceiveTranferA";
+    private String ApiSvcCd;
     @JsonProperty("IsTuno")
     private String IsTuno; // 거래번호(난수생성)
     @JsonProperty("AccessToken")
     private String AccessToken = "d3f92a5b17ea32069a3ede2bd8a964a520e55902032c2a36f34754d310454659";
 
-    public HeaderDto(String ApiNm) {
+    public HeaderDto(String ApiNm, String ApiSvcCd) {
         this.ApiNm = ApiNm;
+        this.ApiSvcCd = ApiSvcCd;
         String now = LocalDateTime.now().toString();
         this.Tsymd = now.split("T")[0].replaceAll("-", "");
         this.Trtm = now.split("T")[1].replaceAll(":", "").substring(0,6);

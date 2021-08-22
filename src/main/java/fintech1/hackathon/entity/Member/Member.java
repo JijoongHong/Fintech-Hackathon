@@ -25,6 +25,7 @@ public class Member implements UserDetails {
     //@GeneratedValue //시퀀스 생성
     Long seq;
 
+    @Id
     @Column(name = "email", unique = true)
     String email;
 

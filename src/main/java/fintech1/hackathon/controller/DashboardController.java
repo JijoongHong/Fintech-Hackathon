@@ -1,9 +1,11 @@
 package fintech1.hackathon.controller;
 
+import fintech1.hackathon.dto.banking.balance.RequestInquireBalanceDto;
 import fintech1.hackathon.dto.banking.electricity.ElectricityFarePaymentDto;
 import fintech1.hackathon.dto.banking.electricity.InquireElectricityFarePaymentDto;
 import fintech1.hackathon.dto.banking.history.InquireTransactionHistoryDto;
 import fintech1.hackathon.dto.banking.sewage.InquireSewageFarePaymentDto;
+import fintech1.hackathon.dto.banking.sewage.RequestInquireSewageFarePaymentDto;
 import fintech1.hackathon.dto.banking.sewage.SewageFareDto;
 import fintech1.hackathon.entity.Member.LivingFee;
 import fintech1.hackathon.entity.Member.Member;
@@ -18,6 +20,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.HashMap;
+
 @RequiredArgsConstructor
 @Controller
 public class DashboardController {
@@ -30,21 +34,20 @@ public class DashboardController {
     public String main(@AuthenticationPrincipal Member member, @AuthenticationPrincipal LivingFee livingFee, Model model){
         InquireElectricityFarePaymentDto electricityFareDto = dashboardService.requestInquireElectricityFarePayment();
         InquireSewageFarePaymentDto inquireSewageFarePaymentDto = dashboardService.requestInquireSewageFarePayment();
-
-        String name = member.getName();
-        Integer rent = livingFee.getRent();
-        Integer mgmtFee = livingFee.getMgmtFee();
-        Integer targetExpenses = livingFee.getTargetExpenses();
+        Integer totalExpenses = dashboardService.requestInquireTransactionHistory();
+        //HashMap<String, Integer> = dashboardService.re
+        //String name = member.getName();
+        //Integer rent = livingFee.getRent();
+        //Integer mgmtFee = livingFee.getMgmtFee();
+        //Integer targetExpenses = livingFee.getTargetExpenses();
         Integer elecFee = Integer.parseInt(electricityFareDto.getTram());
         Integer sewageFee = Integer.parseInt(inquireSewageFarePaymentDto.getRec().get(0).getTram());
-
-        model.addAttribute("name", name);
-        model.addAttribute("rent", rent);
-        model.addAttribute("mgmtFee", mgmtFee);
-        model.addAttribute("targetExpenses", targetExpenses);
+        //model.addAttribute("name", name);
+        //model.addAttribute("rent", rent);
+        //model.addAttribute("mgmtFee", mgmtFee);
+        //model.addAttribute("targetExpenses", targetExpenses);
         model.addAttribute("elecFee", elecFee);
         model.addAttribute("sewageFee", sewageFee);
-
 
         return "main";
     }
@@ -52,22 +55,23 @@ public class DashboardController {
     @PostMapping("/dashboard/electricity-pay")
     public String ElectricityPayment(@AuthenticationPrincipal Member member, @AuthenticationPrincipal LivingFee livingFee, Model model){
         dashboardService.requestElectricityFarePayment();
-        return "electricity-pay";
+        return "main";
     }
 
     @PostMapping("/dashboard/sewage-pay")
     public String SewagePayment(@AuthenticationPrincipal Member member, @AuthenticationPrincipal LivingFee livingFee, Model model){
         dashboardService.requestSewageFarePayment();
-        return "sewage-pay";
+        return "main";
     }
 
+/*
     @GetMapping("/dashboard/report")
     public String report(@AuthenticationPrincipal Member member, @AuthenticationPrincipal LivingFee livingFee, Model model){
         InquireTransactionHistoryDto inquireTransactionHistoryDto = dashboardService.requestInquireTransactionHistory(member.getEmail()); //전달 사용시 수정 필요
         return "report";
 
     }
-
+*/
 
 
 }

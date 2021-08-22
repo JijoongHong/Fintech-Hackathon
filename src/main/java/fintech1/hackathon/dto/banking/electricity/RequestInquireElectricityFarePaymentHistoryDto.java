@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RequestInquireElectricityFarePaymentHistoryDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePaymentHistory");
+    private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePaymentHistory", "13E_001_00");
     @JsonProperty("ElecPayNo")
     private String ElecPayNo = "2632001709000428753"; //전자납부번호
     @JsonProperty("PageNo")

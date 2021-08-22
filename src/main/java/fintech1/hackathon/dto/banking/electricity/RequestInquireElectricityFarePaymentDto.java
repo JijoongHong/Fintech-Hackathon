@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 public class RequestInquireElectricityFarePaymentDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePayment");
+    private HeaderDto headerDto = new HeaderDto("InquireElectricityFarePayment","13E_001_00");
     @JsonProperty("ElecPayNo")
     private String ElecPayNo="0606628088"; //은행코드
     @JsonProperty("Acno")

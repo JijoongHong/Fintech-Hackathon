@@ -17,7 +17,7 @@ public class OpenBankingService {
     private String FinAcno = "00820100010590000000000011165";
 
     public InquireBalanceDto requestBalance(){
-        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance"), FinAcno);
+        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance", "ReceivedTransferA"), FinAcno);
         System.out.println("requestInquireBalanceDto = " + requestInquireBalanceDto.toString());
         InquireBalanceDto inquireBalanceDto = openBankingFeign.requestInquireBalance(requestInquireBalanceDto);
         System.out.println("inquireBalanceDto = " + inquireBalanceDto);
@@ -25,7 +25,7 @@ public class OpenBankingService {
     }
 
     public RequestInquireBalanceDto test(){
-        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance"), FinAcno);
+        RequestInquireBalanceDto requestInquireBalanceDto = new RequestInquireBalanceDto(new HeaderDto("InquireBalance", "ReceivedTransferA"), FinAcno);
         return requestInquireBalanceDto;
     }
 

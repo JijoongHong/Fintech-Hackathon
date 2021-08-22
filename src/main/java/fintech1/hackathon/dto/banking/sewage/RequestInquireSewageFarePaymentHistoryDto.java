@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class RequestInquireSewageFarePaymentHistoryDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto;
+    private HeaderDto headerDto = new HeaderDto("InquireSewageFarePaymentHistory", "13E_002_00");;
     @JsonProperty("ElecPayNo")
     private String ElecPayNo = "2632001709000428753"; //전자납부번호
     @JsonProperty("PageNo")

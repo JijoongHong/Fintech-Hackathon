@@ -14,6 +14,6 @@ public class InquireElectricityFarePaymentHistoryDto {
     private String TotCnt;
     @JsonProperty("PageNo")
     private String PageNo;
-    @JsonProperty("rec")
+    @JsonProperty("REC")
     private List<ElectricityFareHistoryDto> rec;
 }

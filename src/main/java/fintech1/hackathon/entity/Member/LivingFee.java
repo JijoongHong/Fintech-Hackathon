@@ -13,10 +13,8 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Entity
 public class LivingFee {
-    @Id
-    @Column(name = "seq")
-    Long seq;
 
+    @Id
     @Column(name = "email")
     private String email;
 

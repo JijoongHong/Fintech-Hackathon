@@ -12,6 +12,6 @@ public class InquireTransactionHistoryDto {
     private String TopCnt;
     @JsonProperty("Iqtcnt")
     private String Iqtcnt;
-    @JsonProperty("Rec")
-    private List<AccountHistoryDto> Rec;
+    @JsonProperty("REC")
+    private List<AccountHistoryDto> REC;
 }

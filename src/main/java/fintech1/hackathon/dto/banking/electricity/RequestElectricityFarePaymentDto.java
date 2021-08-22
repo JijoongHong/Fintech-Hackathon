@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 public class RequestElectricityFarePaymentDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto = new HeaderDto("ElectricityFarePayment");
+    private HeaderDto headerDto  = new HeaderDto("ElectricityFarePayment","13E_001_00");
     @JsonProperty("PbtxGroNo")
     private String PbtxGroNo = "0420007"; //지로번호
     @JsonProperty("CustInqNo")
@@ -37,5 +37,7 @@ public class RequestElectricityFarePaymentDto {
     private String PryFlnm = "홍길남"; //이름
     @JsonProperty("TrSbjcSrchNm")
     private String TrSbjcSrchNm = "주택관리공단"; //기록사항
+
+
 }
 

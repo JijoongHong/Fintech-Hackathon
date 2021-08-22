@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 public class RequestSewageFarePaymentDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto;
+    private HeaderDto headerDto = new HeaderDto("SewageFarePayment", "13E_002_00");
     @JsonProperty("PbtxGroNo")
     private String PbtxGroNo = "1004102"; //지로번호
     @JsonProperty("PbtxInstClasCd")

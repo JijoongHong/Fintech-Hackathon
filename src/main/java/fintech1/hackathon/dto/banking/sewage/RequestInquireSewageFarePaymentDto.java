@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 public class RequestInquireSewageFarePaymentDto {
     @JsonProperty("Header")
-    private HeaderDto headerDto;
+    private HeaderDto headerDto = new HeaderDto("InquireSewageFarePayment", "13E_002_00");
     @JsonProperty("ElecCsmrNo")
     private String ElecCsmrNo = "263201755751004"; //전자수용가번호
     @JsonProperty("Acno")
