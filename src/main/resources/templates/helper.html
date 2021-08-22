@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="/css/style.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav ul.sub").hide();
+			$("#nav ul.menu li").click(function(){
+				$("ul",this).slideToggle("fast");
+			});
+		});
+        $('a.feellink').click(function(e)   {
+	        e.preventDefault();   
+        });
+        
+	</script>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    #nav { font-family:'arial'; }
+	#nav ul{ width:100%; margin:0; padding:0; }
+	#nav ul.menu li{ 
+        position:relative; 
+        float:left; width:100%; 
+        list-style-type:none; 
+    }
+	#nav ul.menu li a{ 
+        display:block; 
+        width:100%; 
+        height:100%; 
+        line-height:70px; 
+        text-indent:10px; 
+        color:black; 
+        font-weight:bold; 
+        text-decoration:none; 
+        font-family: sans-serif;
+    }
+	#nav ul.menu li a:hover{ 
+        background:#eee; 
+    }
+	#nav ul.menu li .sub a{ 
+        position:relative; 
+        float:left; 
+        display:block; 
+        width:100%; 
+        z-index:auto; 
+        background:white; 
+        font-size: 15px;
+    }
+	#nav ul.menu li .sub a:hover{ 
+        background:#D8F2EC; 
+        color:black; 
+    }
+    .menu-padding {
+        padding-top: 10px;
+        padding-bottom: -10px;
+    }
+	
+    .circle {
+        width: 140px;
+        height: 140px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 50%;
+        background: #D8F2EC;
+        margin: auto;
+        text-align: center;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        border:none;
+    }
+    
+    h4 {
+        color: black;
+        font-family: sans-serif;
+        font-size: 18px;
+        padding-top: 60px;
+    }
+    div.circle:hover {
+        background-color: #56C4B0;
+        color: white;
+    }
+    #two-lines {
+        padding-top: 53px;
+    }
+    ul {
+        font-size: 25px;
+    }
+    h5 {
+        margin-bottom: -5px;
+    }
+    hr {
+        border-color: #56C4B0;
+        margin-top: -5px;
+    }
+    
+    
+</style>
+</head>
+<body>
+
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+            <div class="left-menu">
+                <table style="width:100%">
+                    <colgroup>
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 70%;">
+                        
+                     </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px; "> 
+                                <a href="/dashboard" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/pick.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/fin_rec" title="금융 추천">금융 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/star.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/product_rec" title="상품 추천">상품 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/person.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/helper" title="금융 도우미">금융 도우미</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/community.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/community" title="커뮤니티">커뮤니티</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/setting.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/setting" title="설정">설정</a><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="mascot" src="images/alien.png">
+           </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"><img class="icon" src="images/search.png"></button>
+                </div>
+            </div>
+            <div class="margin-main">
+                <div>
+                    <table style="width:90%; padding: 20px; margin-bottom: 50px">
+                        <tbody>
+                            <tr style="padding-bottom: 10px;">
+                                <td>
+                                    <a href="#common">
+                                        <div class="circle">
+                                            <h4>공통</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#bank">
+                                        <div class="circle">
+                                            <h4>은행</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#invest">
+                                        <div class="circle">
+                                            <h4>금융 투자</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#insurance">
+                                        <div class="circle">
+                                            <h4>보험</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#card">
+                                        <div class="circle">
+                                            <h4>신용 카드</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#ordinary">
+                                        <div class="circle">
+                                            <h4>서민</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#protection">
+                                        <div class="circle">
+                                            <h4 id="two-lines">금융 소비자<br>보호</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#illegal">
+                                        <div class="circle">
+                                            <h4>불법금융대응</h4>
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="nav">
+                    <ul class="menu">
+                        <li id="common" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>공통</h5></a><hr>
+                            <ul class="sub">
+                                <li><a href="helper-detail/common/1.html" target="_blank">알아두면 유익한 금융정보사이트 10선</a></li>
+                                <li><a href="helper-detail/common/2.html" target="_blank">P2P대출상품 투자시 체크해야 할 핵심포인트
+                                </a></li>
+                                <li><a href="helper-detail/common/3.html" target="_blank">금리인상기, 금리부담 완화 등을 위한 금융정보
+                                </a></li>
+                                <li><a href="helper-detail/common/4.html" target="_blank">개인신용정보 권리보장 제도 활용하기
+                                </a></li>
+                                <li><a href="helper-detail/common/5.html" target="_blank">휴가철 여행 단계별로 알아두면 유익한 금융정보
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li id="bank" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>은행</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/bank/1.html">외규 외국환거래 유형 및 외환거래시 유의사항
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/bank/2.html">연말연시, 연금자산 이렇게 챙겨보세요.
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/bank/3.html">외국환거래법규상 금융소비자 유의사항(부동산거래 금전대차편)
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/bank/4.html">1월부터 은행권 금융거래종합보고서를 조회할 수 있습니다.
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/bank/5.html">대표적인 휴면예금 사례 5가지
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li id="invest" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>금융 투자</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/invest/1.html">사회초년생을 위한 금융꿀팁
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/invest/2.html"> ETF 투자시 유의사항 8가지
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/invest/3.html">주식투자시 수수료 등 절감 노하우
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/invest/4.html">주식투자시 수익률 제고 노하우
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/invest/5.html">펀드 투자시 비용절감 노하우 7가지
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li id="insurance" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>보험</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/insurance/1.html">알아두면 유익한 보험상품 공시제도</a></li>
+                                <li><a target="_blank" href="helper-detail/insurance/2.html">전화(TM)를 통한 보험상품 가입시 유의사항</a></li>
+                                <li><a target="_blank" href="helper-detail/insurance/3.html">외화보험 가입시 소비자 유의사항</a></li>
+                                <li><a target="_blank" href="helper-detail/insurance/4.html">저축성보험 가입시 유의사항</a></li>
+                                <li><a target="_blank" href="helper-detail/insurance/5.html">알아두면 유익한 보험계약 관리 노하우</a></li>
+                            </ul>
+                        </li>
+                        <li id="card" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>신용 카드</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/card/1.html">소득공제, 최대로 받는 노하우
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/card/2.html">내 카드 제대로 사용하는 방법 
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/card/3.html">다양한 카드 활용 방법</a></li>
+                                <li><a target="_blank" href="helper-detail/card/4.html">내 카드 포인트 잘 이용하는 방법
+                                    4</a></li>
+                                <li><a target="_blank" href="helper-detail/card/5.html">신용-체크카드 알뜰하게 사용하세요.
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li id="ordinary" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>서민</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/ordinary/1.html">유망기업 성공투자법(1) 크라우드펀딩편
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/ordinary/2.html">저축은행 예적금 알뜰하게 활용하기
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/ordinary/3.html">저축은행 가계신용대출 고객들의 이자부담 줄이는 방법
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/ordinary/4.html">자영업을 영위하시는 사장님들께 유익한 금융지원제도를 종합 안내해 드립니다.
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/ordinary/5.html">서민을 위한 금융상품 10선</a></li>
+                            </ul>
+                        </li>
+                        <li id="protection" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>금융 소비자 보호</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/protection/1.html">알아두면 유익한 금융정보사이트 10선</a></li>
+                                <li><a target="_blank" href="helper-detail/protection/2.html">주식투자시 요주의할 5적(賊)</a></li>
+                                <li><a target="_blank" href="helper-detail/protection/3.html">청소년의 건전한 금융습관 길잡이, 1사 1교 금융교육
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/protection/4.html">파인의 핵심정보 쉽게 이용하는 방법
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/protection/5.html">은행·중소서민 금융상품을 이용할 때 알면 도움이 되는 ‘집밥’ 같은 꿀팁
+                                </a></li>
+                            </ul>
+                        </li>
+                        <li id="illegal" class="menu-padding"><a href="javascript:;" onclick="function();"><h5>불법금융대응</h5></a><hr>
+                            <ul class="sub">
+                                <li><a target="_blank" href="helper-detail/illegal/1.html">보험사기 의심 자동차사고 대처요령
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/illegal/2.html">보이스피싱사기예방서비스이용
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/illegal/3.html">일상 속 보험사기 피해예방 알쓸신잡_허위과장 진료 권유시 유의사항
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/illegal/4.html">보험사기 피해예방
+                                </a></li>
+                                <li><a target="_blank" href="helper-detail/illegal/5.html">보이스피싱 피해예방 10계명</a></li>
+                            </ul>
+                        </li>
+                    </ul>     
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

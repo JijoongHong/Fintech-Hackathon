@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            font-size: 33px;
+        }
+        .bordered {
+            border:2px solid #d3d3d3;
+            border-radius: 25px;
+        }
+        h2 {
+            font-family: sans-serif;
+            font-size: 28px;
+        }
+        .cardnews {
+            padding: 20px 40px 30px 40px;
+            
+        }
+        .card {
+            width: 60%;
+        }
+        .card-position{
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            background-color: white;
+            font-size: 14px;
+            text-align: center;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+        }
+        a.button:hover {
+            background-color: #1BA78A;
+            color: white;
+        }
+        a.button {
+            color: black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+            <div class="left-menu">
+                <table style="width:100%">
+                    <colgroup>
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 70%;">            
+                     </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px"> 
+                                <a href="/dashboard" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/pick.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/fin_rec" title="금융 추천">금융 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/star.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/product_rec" title="상품 추천">상품 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/person.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/helper" title="금융 도우미">금융 도우미</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/community.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/community" title="커뮤니티">커뮤니티</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/setting.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/setting" title="설정">설정</a><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="mascot" src="images/alien.png">
+           </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"> <img class="icon" src="images/search.png"> </button>
+                </div>
+            </div>
+            <div class="margin-main">
+                <div style="height: auto; margin-bottom: 30px;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="top-img" src="images/goldcard.png">
+                                </td>
+                                <td>
+                                    <h1>일라 PICK! 나의 생활패턴에 딱 맞는 카드!</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="column bordered cardnews" style="width: 40%">
+                        <h2>이 구역 쩝쩝박사 주목!</h2>
+                        <p>배달 앱 및 편의점에서 할인 혜택을<br>제공하는 삼성카드 taptap을 써보세요!</p>
+                        <p>대중교통 및 음식점·주점에서도<br>높은 할인률을 제공하고 있어요.</p>
+                        <div class="card-position">
+                            <img class="card" src="images/samsung.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="http://samsungcard-ad.com/pc/taptaporenewel/html/index.html?idx=0&site=QCTAPGWORDPC&cmpid=QCTAPGWORDPC&gclid=CjwKCAjw64eJBhAGEiwABr9o2DHytdMGsCGwfABCtP-RLFvgiVFx6Lix8fjRBIlBqOCz5PqWzax-yhoCw-4QAvD_BwE" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column bordered cardnews" style="width: 40%; margin-left: 20px">
+                        <h2>이 구역 프로 쇼핑러 주목!</h2>
+                        <p>다양한 쇼핑 분야에서 할인 혜택을 제공하는<br>KB 국민 올쇼핑 티타늄 카드를 써보세요!</p>
+                        <p>관리비, 공과금, 편의점, 교통 등의<br>생활 영역에서도 혜택을 제공하고 있어요.</p>
+                        <div class="card-position">
+                            <img class="card" src="images/kukmin.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="https://card.kbcard.com/CXPRICAC0076.cms?mainCC=a&cooperationcode=09233" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="top-img" src="images/redlinegraph.png">
+                                </td>
+                                <td>
+                                    <h1>일라 PICK! 나의 생활패턴에 딱 맞는 주식/투자!</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="column bordered cardnews" style="width: 40%">
+                        <h2>국내 상장 미국 S&P 500 ETF<br>KINDEX 미국 S&P 500</h2>
+                        <p>워렌버핀이 픽한 안전한 주식지수 알고 계시나요?<br>
+                            위험중립형 투자 성향을 가진 분께 추천드려요!</p>
+                        <div class="card-position">
+                            <img class="card" src="images/koreainvest.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="http://www.kindexetf.com/fund/getFundInfo.etf?fundCD=9001Y&tabMenuNo=1&leftMenuNo=24" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column bordered cardnews" style="width: 40%; margin-left: 20px">
+                        <h2>국내 상장 리츠(REITs) ETF<br>
+                            신한 알파리츠</h2>
+                        <p>리츠 ETF에 투자해 부동산 투자를 실천하세요.<br>
+                            실물자산이 없으신 분들께 추천드려요!</p>
+                        <div class="card-position" style="margin-bottom: 13px;">
+                            <img class="card" src="images/shinhan2.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="http://shalphareit.com/html/about/introduce.html" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div >
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="top-img" src="images/dollar.png">
+                                </td>
+                                <td>
+                                    <h1>일라 PICK! 나의 생활패턴에 딱 맞는 대출!</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="column bordered cardnews" style="width: 40%">
+                        <h2>중소기업 취업 청년 전세자금 대출</h2>
+                        <p>중소기업 청년에게 딱맞는 대출상품!<br>
+                            중소기업 재직 중이신 분께 추천드려요.
+                            </p>
+                            <div class="card-position" style="height: 30%">
+                                <img class="card" src="images/middle.png" >
+                            </div>
+                        
+                        <div class="card-position" >
+                            <a class="button bordered" href="http://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020603.jsp" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column bordered cardnews" style="width: 40%; margin-left: 20px">
+                        <h2>청년 전용 버팀목 전세자금</h2>
+                        <p>전세로 점프하기 힘드시죠?<br>
+                            청년 버팀목 전세자금 대출로 월세 지출은 이제 굿바이!</p>
+                        <div style="margin-bottom: 15px;" class="card-position">
+                            <img class="card" src="images/buteemok.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="http://nhuf.molit.go.kr/FP/FP05/FP0502/FP05020303.jsp" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

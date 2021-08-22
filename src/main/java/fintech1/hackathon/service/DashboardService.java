@@ -13,8 +13,10 @@ import fintech1.hackathon.dto.banking.sewage.InquireSewageFarePaymentDto;
 import fintech1.hackathon.dto.banking.sewage.RequestInquireSewageFarePaymentDto;
 import fintech1.hackathon.dto.banking.sewage.RequestSewageFarePaymentDto;
 import fintech1.hackathon.entity.Member.LivingFee;
+import fintech1.hackathon.entity.Member.Member;
 import fintech1.hackathon.feign.OpenBankingFeign;
 import fintech1.hackathon.repository.LivingFeeRepository;
+import fintech1.hackathon.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -29,6 +31,7 @@ public class DashboardService {
     @Autowired
     OpenBankingFeign openBankingFeign;
     private final LivingFeeRepository livingFeeRepository;
+    private final MemberRepository memberRepository;
 
 
     public void requestElectricityFarePayment() {
@@ -103,5 +106,13 @@ public class DashboardService {
         return result;
     }
 
+    public Member getMemberInfo(String email) {
+        return memberRepository.findByEmail(email).
+                orElseThrow(()->new UsernameNotFoundException(email));
+    }
 
+    public LivingFee getLivingFeeInfo(String email) {
+        return livingFeeRepository.findByEmail(email).
+                orElseThrow(()->new UsernameNotFoundException(email));
+    }
 }

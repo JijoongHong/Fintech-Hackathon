@@ -1,10 +1,13 @@
 package fintech1.hackathon.dto.Member;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class LivingFeeDto {
     private String email;
     private Integer rent;

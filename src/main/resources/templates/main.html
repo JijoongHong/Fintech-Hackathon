@@ -1,66 +1,51 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
-      xmlns:th="http://www.w3.org/1999/xhtml">
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
 
-<head>
-    <title>main</title>
+    </head>
     <style>
-        body {
-            background-image:url(https://images.unsplash.com/photo-1612153018787-4899c6e056d7?ixid=MXwxMzcxOTN8MHwxfHNlYXJjaHwxMHx8c2hhbXJvY2tzfGVufDB8fHw&ixlib=rb-1.2.1&fm=jpg&w=3024&h=4032&fit=max);
-            background-size: cover;
+        .huge {
+            float: right;
+            bottom:0;
+            position:fixed;
+            right:0;
         }
-        .center {
-            position: absolute;
-            background-color: white;
-            border-radius: 25px;
-            padding: 100px 50px;
-            width: 60%;
-            height: 50%;
-            margin: 90px 230px;
-
-        }
-        h2 {
+        #to-register {
+            color: black;
             font-family: sans-serif;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+            border-radius: 10px;
         }
-        form input {
-            background-color: #3CBC8D;
-            color: white;
-            border-radius: 25px;
-            border: none;
-            padding: 15px;
-            width: 150px;
+        #to-login {
+            color: black;
             font-family: sans-serif;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+            border-radius: 10px;
         }
-        form input:hover {
-            background: #3Eb489
-        }
-        p {
-            font-family: sans-serif;
-        }
-        form {
-            position: absolute;
-            bottom: 150px;
-            right: 150px;
-        }
-        img {
-            float: left;
-            padding: 50px 100px;
+        a:hover {
+            background-color: #D8F2EC ;
         }
     </style>
-</head>
-<body>
-<div class="center">
-    <img src="https://www.pngkit.com/png/full/24-249639_contact-person-icon-png-circle.png" width="100px">
-    <h2 th:inline="text" > 안녕하세요 [[${name}]]님, </h2>
-    <h2> 현재 잔고는 [[${elecFee}]]원 입니다. </h2>
-    <p style="margin-bottom: -10px">이메일 : </p><span sec:authentication="name"></span> <br>
-    <p>등급 : </p><span sec:authentication="authorities"></span> <br>
+    <body>
 
-    <form id="logout" action="/logout" method="POST">
-        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-        <input type="submit" value="로그아웃"/>
-    </form>
-</div>
-</body>
+        <div style="height: 100%;position:fixed">
+            <div>
+                <img src="images/header.png" width="100%">
+            </div>
+        <div class="margin-main">
+            <img src="images/logo_mint.png" width="15%" style="margin-top: 10%;">
+            <h1 style="padding-bottom: 70px;">1인가구 라이프스타일에 금융을 더하다</h1>
+            <a id="to-register" href="/signup" style="text-decoration:none;">‘일라’와 함께 시작 하기</a>
+            <a id="to-login" href="/login" style="text-decoration:none";>로그인 하기</a>
+
+        </div>
+            <img src="images/ila.png" width="50%" class="huge">
+        </div>
+    </body>
 </html>

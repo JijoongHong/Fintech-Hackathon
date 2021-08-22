@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
-//@CrossOrigin(origins = "*", methods = RequestMethod.POST)
 public class OpenBankingController {
     @Autowired
     OpenBankingService openBankingService;
@@ -23,9 +22,5 @@ public class OpenBankingController {
     public RequestInquireBalanceDto requestInquireBalanceDto(){
         return openBankingService.test();
     }
-
-
-
-
 
 }

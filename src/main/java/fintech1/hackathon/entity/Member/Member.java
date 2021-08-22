@@ -22,15 +22,17 @@ import java.util.Set;
 public class Member implements UserDetails {
     @Id
     @Column(name = "seq")
-    //@GeneratedValue //시퀀스 생성
+    @GeneratedValue //시퀀스 생성
     Long seq;
 
-    @Id
     @Column(name = "email", unique = true)
     String email;
 
     @Column(name = "name")
     String name;
+
+    @Column(name = "birth")
+    String birth;
 
     @Column(name = "password")
     String password;
@@ -39,10 +41,11 @@ public class Member implements UserDetails {
     String auth;
 
     @Builder
-    public Member(String email, String password, String name){
+    public Member(String email, String name, String birth, String password){
         this.email = email;
-        this.password = password;
         this.name = name;
+        this.birth = birth;
+        this.password = password;
         this.auth = "user";
     }
 

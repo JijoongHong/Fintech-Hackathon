@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family: sans-serif;
+            font-size: 33px;
+        }
+        .bordered {
+            border:2px solid #d3d3d3;
+            border-radius: 25px;
+        }
+        h2 {
+            font-family: sans-serif;
+            font-size: 28px;
+        }
+        .cardnews {
+            padding: 20px 40px 30px 40px;
+            
+        }
+        .card {
+            width: 60%;
+        }
+        .card-position{
+            display: flex;
+            justify-content: center;
+        }
+        .button {
+            background-color: white;
+            font-size: 14px;
+            text-align: center;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px;
+            color: black;
+        }
+        a.button:hover {
+            background-color: #1BA78A;
+            color: white;
+        }
+        a.button {
+            color: black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+            <div class="left-menu">
+                <table style="width:100%">
+                    <colgroup>
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 70%;">            
+                     </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px"> 
+                                <a href="/dashboard" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/pick.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/fin_rec" title="금융 추천">금융 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/star.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/product_rec" title="상품 추천">상품 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/person.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/helper" title="금융 도우미">금융 도우미</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/community.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/community" title="커뮤니티">커뮤니티</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/setting.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/setting" title="설정">설정</a><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="mascot" src="images/alien.png">
+           </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"> <img class="icon" src="images/search.png"> </button>
+                </div>
+            </div>
+            <div class="margin-main">
+                <div style="height: auto; margin-bottom: 30px;">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="top-img" src="images/goldcard.png">
+                                </td>
+                                <td>
+                                    <h1>일라 PICK! 나의 소비 패턴에 딱 맞는 식품 구독 상품</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="column bordered cardnews" style="width: 40%">
+                        <h2>배달음식은 이제 그만! </h2>
+                        <p>맛도 좋고, 건강에도 좋은<br>
+                            다양한 식품을 저렴한 가격에 만나보세요!</p>
+                        <p>신규 고객에게만 제공되는 혜택도 놓치지 마세요!</p>
+                        <div class="card-position">
+                            <img class="card" src="images/greating.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="https://www.greating.co.kr/planMeals/planMeals" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column bordered cardnews" style="width: 40%; margin-left: 20px">
+                        <h2>군것질이 빠지면 섭하죠.</h2>
+                        <p>티끌모아 태산이란 말 처럼 적어보이는 간식비도<br>모이면 지출이 매우 크답니다!</p>
+                        <p>선물처럼 집으로 배달되는 과자들을<br>기다리는 설렘을 누려보세요!</p>
+                        <div class="card-position">
+                            <img class="card" src="images/lottle.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="https://lottesweetmall.com/" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img class="top-img" src="images/redlinegraph.png">
+                                </td>
+                                <td>
+                                    <h1>일라 PICK! 나의 소비 패턴에 딱 맞는 의류 구독 상품</h1>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="column bordered cardnews" style="width: 40%">
+                        <h2>이제 쇼핑 때문에 텅장은 그만!</h2>
+                        <p>옷을 사놓고 입지 않거나, 한 번 입을 건데도<br>
+                            구매를 다 하고 계시나요?</p>
+                        <p>
+                            공유 옷장 서비스로 대여부터 구매까지 한번에!<br>월 5,9000원으로 6벌의 의류 만나보세요!
+                        </p>
+                        <div class="card-position">
+                            <img class="card" src="images/closetshare.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="https://www.closetshare.com/theclozet/front/member/loginForm" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column bordered cardnews" style="width: 40%; margin-left: 20px">
+                        <h2>여자라면 신경쓰이는 속옷!</h2>
+                        <p>매달 새로운 속옷과 더불어 사이즈 측정을 위한<br>
+                            줄자, 오래된 속옷을 버릴 수 있는 속옷 봉투까지!</p>
+                        <p>
+                            첫달은 무료구독도 가능하니<br>이너웨어 서비스로 삶의 질을 높여보세요!
+                        </p>
+                        <div class="card-position" style="margin-bottom: 7px;">
+                            <img class="card" src="images/in.png" >
+                        </div>
+                        <div class="card-position" >
+                            <a class="button bordered" href="https://mypage.inthewear.com/shop/subs-monthly-gasm-friends" target="_blank">
+                                신청하기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,8 +18,9 @@ public class MemberController {
     private final MemberService memberService;
 
     @PostMapping("/user") //회원가입
-    public String signUp(MemberDto memberDto){
+    public String signUp(MemberDto memberDto, HttpServletRequest request, HttpServletResponse response) throws ServletException {
         memberService.save(memberDto);
+        request.login(memberDto.getEmail(), memberDto.getPassword());
         return "redirect:/login";
     }
 

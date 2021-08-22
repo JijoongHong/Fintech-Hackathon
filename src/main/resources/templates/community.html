@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+    .wrapper-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .top-menu {
+        padding: 10px 15px;
+        text-align: center;
+        margin: 10px 20px;
+    }
+    body {
+        font-family: sans-serif;
+    }
+    .borders {
+        border:1.5px solid #d3d3d3;
+        border-radius: 15px;
+    }
+    
+    .top-menu:hover {
+        background-color: #D8F2EC;
+    }
+    .post {
+        display: flex;
+        justify-content: center;
+        padding: 50px 70px;
+        margin: 10px 20px;
+    }
+    .margins {
+        
+        margin: 10px 20px;
+        margin-top: 20px;
+    }
+    
+
+</style>
+<body>
+    <div class="row">
+        <div class="column left">
+            <img class="logo" src="images/logo.png">
+            <div class="left-menu">
+                <table style="width:100%">
+                    <colgroup>
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 70%;">
+                        
+                     </colgroup>
+                    <tbody>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/graph.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px; "> 
+                                <a href="/dashboard" title="자산 관리">자산 관리</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/pick.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/fin_rec" title="금융 추천">금융 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/star.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/product_rec" title="상품 추천">상품 추천</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/person.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/helper" title="금융 도우미">금융 도우미</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/community.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/community" title="커뮤니티">커뮤니티</a><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-top: 7px; padding-left: 45px;">
+                                <img class ="menu-img" src="images/setting.png">
+                            </td>
+                            <td style="text-align: left; padding-left: 10px;"> 
+                                <a href="/setting" title="설정">설정</a><br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <img class="mascot" src="images/alien.png">
+           </div>
+        </div>
+        <div class="column right">
+            <div class="head">
+                <div class="search">
+                    <input type="text" class="search" placeholder="필요한 서비스를 검색해 보세요">
+                    <button class="click"><img class="icon" src="images/search.png"></button>
+                </div>
+            </div>
+            <div class="margin-main">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img class="top-img" src="images/hand.png">
+                            </td>
+                            <td>
+                                <h1>원하는 게시판을 선택해 게시물을 작성해주세요!</h1>    
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="wrapper-menu" width="100%">
+                    <div class="top-menu borders"><a href="#" style="color:black">자유 게시판</a></div>
+                    <div class="top-menu borders"><a href="#" style="color:black">매물 게시판</a></div>
+                    <div class="top-menu borders"><a href="#" style="color:black">금융 게시판</a></div>
+                </div>
+                <div class="post borders" width="90%">
+                    <img src="images/newpost.png" width="20%">
+                </div>
+                <div class="margins">
+                    <img src="images/2fcf57d2-fed0-450a-a99a-7b19bc4f32d3.png" width="100%">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

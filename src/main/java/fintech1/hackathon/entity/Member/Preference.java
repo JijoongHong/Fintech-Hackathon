@@ -6,17 +6,20 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @NoArgsConstructor
 @Entity
 @Getter
 public class Preference {
+
     @Id
     @Column(name = "seq")
+    @GeneratedValue //시퀀스 생성
     Long seq;
 
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     @Column(name = "riskTaking")

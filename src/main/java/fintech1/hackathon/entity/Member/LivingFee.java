@@ -3,19 +3,26 @@ package fintech1.hackathon.entity.Member;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
 @Getter
+@Setter
 @NoArgsConstructor
 @Entity
 public class LivingFee {
 
     @Id
-    @Column(name = "email")
+    @Column(name = "seq")
+    @GeneratedValue //시퀀스 생성
+    Long seq;
+
+    @Column(name = "email", unique = true)
     private String email;
 
     @Column(name = "rent")
@@ -47,7 +54,7 @@ public class LivingFee {
 
     @Builder
     public LivingFee(String email, Integer rent, Integer mgmtFee, Integer targetExpenses, Boolean isAutopay, String autopayDay, String bankCode, String account, String targetBankCode, String targetAccount) {
-        this.seq = seq;
+        //this.seq = seq;
         this.email = email;
         this.rent = rent;
         this.mgmtFee = mgmtFee;
